@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://xsdq388we22x"]
+
+[ext_resource type="Script" uid="uid://dmfayyamynli5" path="res://v_box_container.gd" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+top_level = true
+offset_left = 2.0
+offset_top = 308.0
+offset_right = 1153.0
+offset_bottom = 647.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_wtcfe")
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Començar la animació
+"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Sortir"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer" method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="VBoxContainer" method="_on_button_2_pressed"]
